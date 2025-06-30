@@ -1,2 +1,3 @@
 # autotests-api
-another test project for education
+another test project for education and practice
+
