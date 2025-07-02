@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package userservice;
+
+// Defining the request message
+message GetUserRequest {
+  string username = 1;
+}
+
+// Defining the responce message
+message GetUserResponse {
+  string message = 1;
+}
+
+// Defining gRPC-service
+service UserService {
+  // Defining method for gRPC-service
+  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+}
