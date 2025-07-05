@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/.idea/autotests-api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/async.py" afterDir="false" />
+    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="async example">
+      <change afterPath="$PROJECT_DIR$/websocket_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websocket_server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.async.executor": "Run",
     "Python.json_python.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -117,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751660782876</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="async example">
+      <option name="closed" value="true" />
+      <created>1751703453949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751703453949</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,6 +134,7 @@
     <MESSAGE value="JSON Basics + Practice&#10;Chapter5.2part1" />
     <MESSAGE value="gRPC protol -- service+client+server" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
+    <MESSAGE value="async example" />
+    <option name="LAST_COMMIT_MESSAGE" value="async example" />
   </component>
 </project>
