@@ -8,7 +8,7 @@ print(response.status_code)  # 200
 
 #example №2
 data = {
-    "title": "Новая задача",
+    "title": "New interesting task",
     "completed": False,
     "userId": 1
 }
