@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="HTTPX (6.2) p3=delete_user" />
+    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="Api client (6.3) p1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,10 +51,12 @@
     "Python.__init__.executor": "Run",
     "Python.async.executor": "Run",
     "Python.httpsx_authentication.executor": "Run",
+    "Python.httpx_client.executor": "Run",
     "Python.httpx_create_user.executor": "Run",
     "Python.httpx_delete_user.executor": "Run",
     "Python.httpx_example.executor": "Run",
     "Python.httpx_get_user.executor": "Run",
+    "Python.httpx_update_user.executor": "Run",
     "Python.json_python.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -65,7 +67,29 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.httpx_delete_user">
+  <component name="RunManager" selected="Python.httpx_client">
+    <configuration name="httpx_client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autotests-api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/httpx_client.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="httpx_create_user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autotests-api" />
       <option name="ENV_FILES" value="" />
@@ -132,10 +156,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="httpx_update_user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autotests-api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/httpx_update_user.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.httpx_delete_user" />
+        <item itemvalue="Python.httpx_client" />
+        <item itemvalue="Python.httpx_update_user" />
         <item itemvalue="Python.httpx_get_user" />
+        <item itemvalue="Python.httpx_delete_user" />
         <item itemvalue="Python.httpx_create_user" />
       </list>
     </recent_temporary>
@@ -267,7 +315,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752091964835</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="HTTPX (6.2) p4=update user">
+      <option name="closed" value="true" />
+      <created>1752261645261</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1752261645261</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Api client (6.3) p1">
+      <option name="closed" value="true" />
+      <created>1752265747373</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1752265747373</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -283,6 +347,8 @@
     <MESSAGE value="into to HTTPX p2 (6.1 p2)+homework" />
     <MESSAGE value="HTTPX (6.2) p1=create_user p2= get_user" />
     <MESSAGE value="HTTPX (6.2) p3=delete_user" />
-    <option name="LAST_COMMIT_MESSAGE" value="HTTPX (6.2) p3=delete_user" />
+    <MESSAGE value="HTTPX (6.2) p4=update user" />
+    <MESSAGE value="Api client (6.3) p1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api client (6.3) p1" />
   </component>
 </project>
