@@ -12,13 +12,13 @@ class LoginRequestDict(TypedDict):
 
 class RefreshRequestDict(TypedDict):
     """Description of the structure of the request for updating the token."""
-    refreshToken: str#in general Python named like snake_case, buy this camelCase
+    refreshToken: str #in general Python named like snake_case, buy this camelCase
 
 
 
 class AuthenticationClient(APIClient):
     """Client for working with /api/v1/authentication"""
-    pass
+
 
     def login_api(self, request: LoginRequestDict) -> Response:
         """The method authenticates the user.
