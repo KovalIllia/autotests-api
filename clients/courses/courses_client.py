@@ -65,5 +65,5 @@ class CoursesClient(APIClient):
     def delete_course_api(self,course_id: str)->Response:
         """Method for deleting a course.
         :param course_id: Course ID.
-        :return: Response from the server as an httpx.Response object"""
+        :return: Response from the server as httpx.Response object"""
         return self.delete(f"/api/v1/courses/{course_id}")
