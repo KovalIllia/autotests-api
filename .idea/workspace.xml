@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="Api client (6.3) p1">
-      <change afterPath="$PROJECT_DIR$/clients/users/private_users_client.py" afterDir="false" />
+    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="Api client (6.4) p1 &quot;PrivateUsersClient&quot;">
+      <change afterPath="$PROJECT_DIR$/clients/files/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/files/files_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/httpx_create_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/files/marioTest.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/authentication/authentication_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/authentication/authentication_client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +59,7 @@
     "Python.async.executor": "Run",
     "Python.httpsx_authentication.executor": "Run",
     "Python.httpx_client.executor": "Run",
+    "Python.httpx_create_file.executor": "Run",
     "Python.httpx_create_user.executor": "Run",
     "Python.httpx_delete_user.executor": "Run",
     "Python.httpx_example.executor": "Run",
@@ -68,11 +72,16 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "/home/koval_i/PycharmProjects/autotests-api",
+    "last_opened_file_path": "/home/koval_i/PycharmProjects/autotests-api/testdata/files",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.private_users_client">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/testdata/files" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.httpx_create_file">
     <configuration name="httpx_client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autotests-api" />
       <option name="ENV_FILES" value="" />
@@ -95,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="httpx_delete_user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="httpx_create_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autotests-api" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/httpx_delete_user.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/httpx_create_file.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.httpx_create_file" />
         <item itemvalue="Python.private_users_client" />
         <item itemvalue="Python.httpx_client" />
         <item itemvalue="Python.httpx_update_user" />
         <item itemvalue="Python.httpx_get_user" />
-        <item itemvalue="Python.httpx_delete_user" />
       </list>
     </recent_temporary>
   </component>
@@ -336,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752265747373</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Api client (6.4) p1 &quot;PrivateUsersClient&quot;">
+      <option name="closed" value="true" />
+      <created>1752519325177</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1752519325177</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -354,6 +371,7 @@
     <MESSAGE value="HTTPX (6.2) p3=delete_user" />
     <MESSAGE value="HTTPX (6.2) p4=update user" />
     <MESSAGE value="Api client (6.3) p1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Api client (6.3) p1" />
+    <MESSAGE value="Api client (6.4) p1 &quot;PrivateUsersClient&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api client (6.4) p1 &quot;PrivateUsersClient&quot;" />
   </component>
 </project>
