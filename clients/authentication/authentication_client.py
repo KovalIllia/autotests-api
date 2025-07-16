@@ -1,8 +1,8 @@
 from typing import TypedDict
-from httpx import Response
+from httpx import Response, Client
 
 from clients.api_client import APIClient
-
+from clients.public_http_builder import  get_public_http_client
 
 class LoginRequestDict(TypedDict):
     """Description of the authentication request structure."""
@@ -23,7 +23,7 @@ class AuthenticationClient(APIClient):
     def login_api(self, request: LoginRequestDict) -> Response:
         """The method authenticates the user.
         :param request: Dictionary with email and password.
-        :return: Response from the server as an httpx.Response object"""
+        :return: Response from the server as httpx.Response object"""
         return self.post("/api/v1/authentication/login", json=request)
 
 # 
@@ -33,6 +33,17 @@ class AuthenticationClient(APIClient):
     def refresh_api(self, request: RefreshRequestDict) -> Response:
         """The method refreshes the authorization token.
         :param request: Dictionary with refreshToken.
-        :return: Response from the server as an httpx.Response object
+        :return: Response from the server as httpx.Response object
         """
         return self.post("/api/v1/authentication/refresh", json=request)
+
+
+def get_authentication_client()-> AuthenticationClient:
+    """The function creates an instance of AuthenticationClient with the HTTP client already configured.
+        :return: A ready-to-use AuthenticationClient."""
+    # return AuthenticationClient(client=Client(timeout=100,base_url="http://localhost:8000")) #analog
+    return AuthenticationClient(client=get_public_http_client())
+
+#
+# test_client=get_authentication_client()
+# test_client.
