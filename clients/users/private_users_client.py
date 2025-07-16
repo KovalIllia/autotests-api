@@ -3,6 +3,7 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import APIClient
+from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
 
 
 class UpdateUserRequestDict(TypedDict):
@@ -42,3 +43,11 @@ class PrivateUsersClient(APIClient):
 
 # print(UpdateUserRequestDict().get("email"))
 # print(UpdateUserRequestDict().get("email", "sdsdsdsds"))
+
+def get_private_users_client(user: AuthenticationUserDict) -> PrivateUsersClient:
+    """The function creates an instance of PrivateUsersClient with the HTTP client already configured.
+    :return: Ready-to-use PrivateUsersClient."""
+    return PrivateUsersClient(client=get_private_http_client(user))
+
+# client=get_private_users_client({"email": "ssd@", "password": "sdsdsd"})
+# client.delete() #logined user

@@ -3,6 +3,8 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import APIClient
+from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
+from clients.users.private_users_client import PrivateUsersClient
 
 
 class GetCoursesQueryDict(TypedDict):
@@ -67,3 +69,11 @@ class CoursesClient(APIClient):
         :param course_id: Course ID.
         :return: Response from the server as httpx.Response object"""
         return self.delete(f"/api/v1/courses/{course_id}")
+
+def get_courses_client(user: AuthenticationUserDict) -> PrivateUsersClient:
+    """The function creates a CoursesClient instance with the HTTP client already configured.
+    :return: CoursesClient ready to use."""
+    return PrivateUsersClient(client=get_private_http_client(user))
+
+# client=get_private_users_client({"email": "ssd@", "password": "sdsdsd"})
+# client.delete() #logined user

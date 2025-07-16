@@ -59,3 +59,4 @@ class ExercisesClient(APIClient):
         :param exercise_id: Course ID.
         :return: Response from the server as httpx.Response object"""
         return self.delete(f"/api/v1/exercises/{exercise_id}")
+
