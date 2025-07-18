@@ -4,7 +4,16 @@ from httpx import Response,Client
 from clients.api_client import APIClient
 from clients.public_http_builder import get_public_http_client
 
-class UserCreationRequestDict(TypedDict):
+
+class User(TypedDict):
+    """Description of the user structure."""
+    id: str
+    email: str
+    lastName: str
+    firstName: str
+    middleName: str
+
+class CreateUserRequestDict(TypedDict):
     """Description of the authentication request structure."""
     email: str
     password: str
@@ -12,15 +21,23 @@ class UserCreationRequestDict(TypedDict):
     firstName: str
     middleName: str
 
+class CreateUserResponseDict(TypedDict):
+    """Description of the structure of the user creation response."""
+    user: User
+
 class PublicUsersClient(APIClient):
     """Client for working with /api/v1/users -- creation new user"""
 
 
-    def create_user_api(self, request: UserCreationRequestDict) -> Response:
+    def create_user_api(self, request: CreateUserRequestDict) -> Response:
         """The method for creating new user.
         :param request: Dictionary with email,passwor,lastName,fistName,middleName
-        :return: Response from the server as an httpx.Response object"""
+        :return: Response from the server as httpx.Response object"""
         return self.post("/api/v1/users", json=request)
+
+    def create_user(self, request: CreateUserRequestDict) -> CreateUserResponseDict:
+        response = self.create_user_api(request)
+        return response.json()
 
 def get_public_users_client()-> PublicUsersClient:
     """The function creates an instance of PublicUsersClient with the HTTP client already configured.

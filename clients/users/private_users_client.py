@@ -6,12 +6,25 @@ from clients.api_client import APIClient
 from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
 
 
+class User(TypedDict):
+    """Description of the user structure."""
+    id: str
+    email: str
+    lastName: str
+    firstName: str
+    middleName: str
+
 class UpdateUserRequestDict(TypedDict):
     """Description of the structure of a user update request."""
     email: str | None
     lastName: str | None
     firstName: str | None
     middleName: str | None
+
+
+class GetUserResponseDict:
+    """Description of the structure of the user's response."""
+    user: User
 
 
 class PrivateUsersClient(APIClient):
@@ -43,6 +56,11 @@ class PrivateUsersClient(APIClient):
 
 # print(UpdateUserRequestDict().get("email"))
 # print(UpdateUserRequestDict().get("email", "sdsdsdsds"))
+
+    def get_user(self, user_id: str) -> GetUserResponseDict:
+        response = self.get_user_api(user_id)
+        return response.json()
+
 
 def get_private_users_client(user: AuthenticationUserDict) -> PrivateUsersClient:
     """The function creates an instance of PrivateUsersClient with the HTTP client already configured.

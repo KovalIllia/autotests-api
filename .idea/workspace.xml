@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="Api client (6.5) p1 &quot;create public_http_builder for working with authentication_client and public_users_client &quot;">
-      <change afterPath="$PROJECT_DIR$/clients/private_http_builder.py" afterDir="false" />
+    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="Api client (6.5) p2 &quot;create private_http_builder for working with authentication_client,courses_client,files_client&quot;">
+      <change afterPath="$PROJECT_DIR$/api_client_get_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/authentication/authentication_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/authentication/authentication_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/courses/courses_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/courses/courses_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/exercises/exercises_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/exercises/exercises_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/files/files_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/files/files_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/public_http_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/public_http_builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/users/private_users_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/users/private_users_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/users/public_users_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/users/public_users_client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,30 +49,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.async.executor&quot;: &quot;Run&quot;,
-    &quot;Python.httpsx_authentication.executor&quot;: &quot;Run&quot;,
-    &quot;Python.httpx_client.executor&quot;: &quot;Run&quot;,
-    &quot;Python.httpx_create_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python.httpx_create_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python.httpx_delete_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python.httpx_example.executor&quot;: &quot;Run&quot;,
-    &quot;Python.httpx_get_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python.httpx_update_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python.json_python.executor&quot;: &quot;Run&quot;,
-    &quot;Python.private_users_client.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/koval_i/PycharmProjects/qa-automation-engineer-api-course&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MTProjectTreeConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.__init__.executor": "Run",
+    "Python.async.executor": "Run",
+    "Python.httpsx_authentication.executor": "Run",
+    "Python.httpx_client.executor": "Run",
+    "Python.httpx_create_file.executor": "Run",
+    "Python.httpx_create_user.executor": "Run",
+    "Python.httpx_delete_user.executor": "Run",
+    "Python.httpx_example.executor": "Run",
+    "Python.httpx_get_user.executor": "Run",
+    "Python.httpx_update_user.executor": "Run",
+    "Python.json_python.executor": "Run",
+    "Python.private_users_client.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "/home/koval_i/PycharmProjects/autotests-api",
+    "settings.editor.selected.configurable": "MTProjectTreeConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/testdata/files" />
@@ -387,7 +382,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752684783177</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Api client (6.5) p2 &quot;create private_http_builder for working with authentication_client,courses_client,files_client&quot;">
+      <option name="closed" value="true" />
+      <created>1752693955979</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1752693955979</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -410,6 +413,7 @@
     <MESSAGE value="Api client (6.4) p3 &quot;CoursesClient Client for working with /api/v1/courses&quot;" />
     <MESSAGE value="Api client (6.4) p4 practice&quot;Client for working with /api/v1/exercise&quot;" />
     <MESSAGE value="Api client (6.5) p1 &quot;create public_http_builder for working with authentication_client and public_users_client &quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Api client (6.5) p1 &quot;create public_http_builder for working with authentication_client and public_users_client &quot;" />
+    <MESSAGE value="Api client (6.5) p2 &quot;create private_http_builder for working with authentication_client,courses_client,files_client&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api client (6.5) p2 &quot;create private_http_builder for working with authentication_client,courses_client,files_client&quot;" />
   </component>
 </project>
