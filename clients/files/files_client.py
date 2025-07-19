@@ -6,12 +6,23 @@ from clients.api_client import APIClient
 from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
 from clients.users.private_users_client import PrivateUsersClient
 
+class File(TypedDict):
+    """Description of file structure"""
+    id: str
+    filename: str
+    directory: str
+    url: str
 
 class CreateFileRequestDict(TypedDict):
     """Description of the structure of a file creation request."""
     filename: str
     directory: str
     upload_file: str
+
+class CreateFileResponseDict(TypedDict):
+    """Description of the structure of the file creation response."""
+    file: File
+
 
 
 class FilesClient(APIClient):
@@ -36,10 +47,17 @@ class FilesClient(APIClient):
         :return: Response from the server as an httpx.Response object"""
         return self.delete(f"/api/v1/files/{file_id}")
 
-def get_files_client(user: AuthenticationUserDict) -> PrivateUsersClient:
+    def create_file(self,request: CreateFileRequestDict)-> CreateFileResponseDict:
+        response=self.create_file_api(request)
+        return response.json()
+
+
+
+
+def get_files_client(user: AuthenticationUserDict) -> FilesClient:
     """The function creates a FilesClient instance with the HTTP client already configured.
     :return: The FilesClient is ready to use."""
-    return PrivateUsersClient(client=get_private_http_client(user))
+    return FilesClient(client=get_private_http_client(user))
 
 # client=get_private_users_client({"email": "ssd@", "password": "sdsdsd"})
 # client.delete() #logined user

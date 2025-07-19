@@ -3,16 +3,28 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import APIClient
+from clients.files.files_client import File
 from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
-from clients.users.private_users_client import PrivateUsersClient
+from clients.users.private_users_client import PrivateUsersClient, User
 
+
+class Course(TypedDict):
+    """Description of course structure"""
+    id: str
+    title: str
+    maxScore: int
+    minScore: int
+    description: str
+    previewFile: File
+    estimatedTime: str
+    createdByUser: User
 
 class GetCoursesQueryDict(TypedDict):
     """Description of the structure of the request for obtaining a list of courses."""
     userId: str
 
 
-class CreateCoursesRequestDict(TypedDict):
+class CreateCourseRequestDict(TypedDict):
     """Description of the structure of the request for creating a course."""
     title: str
     maxScore: int
@@ -21,6 +33,12 @@ class CreateCoursesRequestDict(TypedDict):
     estimatedTime: str
     previewFileId: str
     createdByUserId: str
+
+class CreateCourseResponseDict(TypedDict):
+    """Description of the structure of the course creation response"""
+    course: Course
+
+
 
 class UpdateCoursesRequestDict(TypedDict):
     """Description of the structure of the request for updating a course."""
@@ -48,7 +66,7 @@ class CoursesClient(APIClient):
         return self.get(f"/api/v1/courses/{course_id}")
 
 
-    def create_course_api(self, request: CreateCoursesRequestDict) -> Response:
+    def create_course_api(self, request: CreateCourseRequestDict) -> Response:
         """Method for creating a course.
         :param request: Dictionary with title, maxScore, minScore, description, estimatedTime,
         previewFileId, createdByUserId.
@@ -70,10 +88,15 @@ class CoursesClient(APIClient):
         :return: Response from the server as httpx.Response object"""
         return self.delete(f"/api/v1/courses/{course_id}")
 
-def get_courses_client(user: AuthenticationUserDict) -> PrivateUsersClient:
+    def create_course(self, request: CreateCourseRequestDict)->CreateCourseResponseDict:
+        response=self.create_course_api(request)
+        return response.json()
+
+
+def get_courses_client(user: AuthenticationUserDict) -> CoursesClient:
     """The function creates a CoursesClient instance with the HTTP client already configured.
     :return: CoursesClient ready to use."""
-    return PrivateUsersClient(client=get_private_http_client(user))
+    return CoursesClient(client=get_private_http_client(user))
 
 # client=get_private_users_client({"email": "ssd@", "password": "sdsdsd"})
 # client.delete() #logined user
