@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="Api client (6.5) p5 &quot;practice&quot;">
-      <change afterPath="$PROJECT_DIR$/pydantic_example.py" afterDir="false" />
+    <list default="true" id="6b467fc1-243b-402c-8e2b-8461335321e7" name="Changes" comment="Pydantic(7.1) p1 &quot;start&quot;">
+      <change afterPath="$PROJECT_DIR$/pydantic_basics.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +66,7 @@
     &quot;Python.httpx_update_user.executor&quot;: &quot;Run&quot;,
     &quot;Python.json_python.executor&quot;: &quot;Run&quot;,
     &quot;Python.private_users_client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pydantic_basics.executor&quot;: &quot;Run&quot;,
     &quot;Python.pydantic_example.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -81,7 +82,7 @@
       <recent name="$PROJECT_DIR$/testdata/files" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pydantic_example">
+  <component name="RunManager" selected="Python.pydantic_basics">
     <configuration name="api_client_create_course" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autotests-api" />
       <option name="ENV_FILES" value="" />
@@ -148,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="httpx_create_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pydantic_basics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autotests-api" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,7 +162,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/httpx_create_file.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pydantic_basics.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pydantic_basics" />
         <item itemvalue="Python.pydantic_example" />
         <item itemvalue="Python.api_client_create_exercise" />
         <item itemvalue="Python.api_client_create_course" />
         <item itemvalue="Python.api_client_get_user" />
-        <item itemvalue="Python.httpx_create_file" />
       </list>
     </recent_temporary>
   </component>
@@ -417,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752952314305</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Pydantic(7.1) p1 &quot;start&quot;">
+      <option name="closed" value="true" />
+      <created>1753198010526</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1753198010526</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -455,6 +464,7 @@
     <MESSAGE value="Api client (6.5) p3 &quot;create api_client_get_user for working with api_clients (public and private)&quot;" />
     <MESSAGE value="Api client (6.5) p4 &quot;update FilesClient,CoursesClient, create api_client_create_course&quot;" />
     <MESSAGE value="Api client (6.5) p5 &quot;practice&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Api client (6.5) p5 &quot;practice&quot;" />
+    <MESSAGE value="Pydantic(7.1) p1 &quot;start&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pydantic(7.1) p1 &quot;start&quot;" />
   </component>
 </project>
