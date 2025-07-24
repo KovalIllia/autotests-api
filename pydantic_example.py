@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing_inspection.typing_objects import alias
+from typing_inspection.typing_objects import *
 
 
 class User(BaseModel):
