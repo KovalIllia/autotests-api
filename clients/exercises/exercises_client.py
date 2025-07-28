@@ -3,7 +3,7 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import APIClient
-from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
+from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
 
 
 class Exercise(TypedDict):
@@ -113,7 +113,7 @@ class ExercisesClient(APIClient):
         response = self.update_exercise_api(exercise_id,query)
         return response.json()
 
-def get_exercise_client(user: AuthenticationUserDict) -> ExercisesClient:
+def get_exercise_client(user: AuthenticationUserSchema) -> ExercisesClient:
     """The function creates a FilesClient instance with the HTTP client already configured.
     :return: The FilesClient is ready to use."""
     return ExercisesClient(client=get_private_http_client(user))

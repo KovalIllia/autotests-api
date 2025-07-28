@@ -3,7 +3,7 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import APIClient
-from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
+from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
 
 
 class User(TypedDict):
@@ -62,7 +62,7 @@ class PrivateUsersClient(APIClient):
         return response.json()
 
 
-def get_private_users_client(user: AuthenticationUserDict) -> PrivateUsersClient:
+def get_private_users_client(user: AuthenticationUserSchema) -> PrivateUsersClient:
     """The function creates an instance of PrivateUsersClient with the HTTP client already configured.
     :return: Ready-to-use PrivateUsersClient."""
     return PrivateUsersClient(client=get_private_http_client(user))
